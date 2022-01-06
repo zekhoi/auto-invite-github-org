@@ -1,4 +1,12 @@
 {
+  "name": "auto-invite-github-org",
+  "version": "1.0.0",
+  "description": "auto invite member to github organization",
+  "main": "invite.js",
+  "repository": "https://github.com/zekhoi/auto-invite-github-org.git",
+  "author": "Khoironi Kurnia Syah <khoironidev@gmail.com>",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
     "axios": "^0.24.0",
     "dotenv": "^10.0.0"

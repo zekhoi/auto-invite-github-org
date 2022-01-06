@@ -13,17 +13,15 @@ const inviteMember = async (email) => {
     axios.defaults.headers.common["Accept"] = "application/vnd.github.v3+json";
     axios.defaults.headers.common["Authorization"] = `token ${token}`;
     axios
-        .post(`https://api.github.com/orgs/${org}/invitations`, { email: email })
-        .then(function (response) {
+      .post(`https://api.github.com/orgs/${org}/invitations`, { email: email })
+      .then((response) =>
         console.log(
-            response.status === 201
+          response.status === 201
             ? "Send to " + email + ": Success"
             : "Send to " + email + ": Failed"
-        );
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+        )
+      )
+      .catch((error) => console.log(error));
 
 };
 

@@ -9,10 +9,11 @@ emails = emails.split("\n");
 
 const inviteMember = async (email) => {
     const token = process.env.GITHUB_TOKEN;
+    const org = process.env.ORGANIZATION;
     axios.defaults.headers.common["Accept"] = "application/vnd.github.v3+json";
     axios.defaults.headers.common["Authorization"] = `token ${token}`;
     axios
-        .post("https://api.github.com/orgs/kawaiidev/invitations", { email: email })
+        .post(`https://api.github.com/orgs/${org}/invitations`, { email: email })
         .then(function (response) {
         console.log(
             response.status === 201

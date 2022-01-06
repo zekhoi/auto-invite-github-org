@@ -6,6 +6,7 @@ Setup your github token in `.env` file
 
 ```env
 GITHUB_TOKEN=yourgithubtoken
+ORGANIZATION=yourorganization
 ```
 ___
 
